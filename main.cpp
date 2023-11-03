@@ -1,4 +1,5 @@
 #include <iostream>
+#include<math.h>
 using namespace std;
 long long getSum(vector<long long> arr)
 {
@@ -8,10 +9,16 @@ long long getSum(vector<long long> arr)
 
     return sum;
 }
+double getAverage(vector<long long> arr)
+{
+    double sum = getSum(arr);
+    return sum / (int)(arr.size());
+}
 int main()
 {
     vector<long long> arr;
     for(int i = 1;i <= 10;++i) 
         arr.push_back(i);
     cout << getSum(arr) << endl;
+    cout << getAverage(arr) << endl;
 }
