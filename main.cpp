@@ -14,6 +14,16 @@ double getAverage(vector<long long> arr)
     double sum = getSum(arr);
     return sum / (int)(arr.size());
 }
+
+long long getMinimum(vector<long long> arr)
+{
+    long long minimumValue = arr[0];
+    for(auto &curElement : arr)
+        minimumValue = min(minimumValue, curElement);
+
+    return minimumValue;
+
+}
 int main()
 {
     vector<long long> arr;
@@ -21,4 +31,5 @@ int main()
         arr.push_back(i);
     cout << getSum(arr) << endl;
     cout << getAverage(arr) << endl;
+    cout << getMinimum(arr) << endl;
 }
